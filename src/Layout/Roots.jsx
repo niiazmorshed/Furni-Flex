@@ -1,11 +1,18 @@
 
 import { Outlet } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const Roots = () => {
     return (
         <div>
-            <Outlet></Outlet>
+        <div className="font-nunito">
+          <Outlet></Outlet>
         </div>
+        <div className="mt-20 font-sans">
+          <Footer></Footer>
+        </div>
+      </div>
+        
     );
 };
 

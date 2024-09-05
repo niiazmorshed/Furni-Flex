@@ -57,9 +57,9 @@ const Login = () => {
       <div className="flex justify-center min-h-screen">
         <div className="hero-content mt-16">
           <div className="flex-col w-[600px]">
-            <div>
+            <div className="text-center">
               <h2 className="text-3xl font-bold">Welcome Back </h2>
-              <p>Enter Your Credintial To Access Your Accout</p>
+              <p className="font-base pt-2">Enter Your Credintial To Access Your Accout</p>
             </div>
             <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
               <form onSubmit={handleLogin} className="card-body">
