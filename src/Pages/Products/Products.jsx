@@ -5,6 +5,7 @@ import ProductsCard from "./ProductsCard";
 
 const Products = () => {
   const info = useLoaderData();
+  const half = info.slice(0, 6);
   return (
     <div>
       <Helmet>
@@ -13,12 +14,12 @@ const Products = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar></Navbar>
-      <div className="drawer lg:drawer-open my-4">
+      <div className="drawer lg:drawer-open my-32 ">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Page content here */}
           <div className="md:grid md:grid-cols-3 gap-6 mx-4  ">
-            {info.map((i) => (
+            {half.map((i) => (
               <ProductsCard key={i.id} product={i}></ProductsCard>
             ))}
           </div>
@@ -46,6 +47,9 @@ const Products = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <button className="btn btn-info btn-outline w-44">Show All</button>
       </div>
     </div>
   );
