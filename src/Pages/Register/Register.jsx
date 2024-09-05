@@ -18,6 +18,7 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const pass = form.get("password");
+    console.log(name, photo, email, pass);
 
     // Checking The Password requirements
     if (pass.length < 6) {
@@ -52,38 +53,49 @@ const Register = () => {
   };
   return (
     <>
-      <div>
-        <div className=" hero min-h-screen bg-base-200">
-          <div className=" hero-content flex-col md:w-96">
+      <div className="flex justify-center min-h-screen">
+        <div className="hero-content mt-16">
+          <div className="flex-col w-[600px]">
             <div className="text-center">
-              <h1 className="text-4xl font-bold">Register Now!</h1>
+              <h2 className="text-3xl font-bold">Welcome Back To </h2>
+              <h1 className="text-5xl font-bold">
+                <span className="text-black">Furni</span>{" "}
+                <span className="text-blue-500">Flex</span>
+              </h1>
+              <p className="font-base pt-2">
+                Signup For Purchase Your Desire Products
+              </p>
             </div>
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
               <form onSubmit={handleRegister} className="card-body">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter Your Name"
-                    className="input input-bordered"
-                    required
-                  />
+                <div className="flex gap-6">
+                  {/*First Name */}
+                  <div className="form-control w-full">
+                    <label className="label">
+                      <span className="label-text">First Name</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your First Name"
+                      className="input input-bordered"
+                      required
+                    />
+                  </div>
+
+                  {/* Last Name */}
+                  <div className="form-control w-full">
+                    <label className="label">
+                      <span className="label-text">Last Name (Optional)</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter Your Last Name"
+                      className="input input-bordered"
+                    />
+                  </div>
                 </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Photo URL</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="photo"
-                    placeholder="Enter Your Photo URL"
-                    className="input input-bordered"
-                    required
-                  />
-                </div>
+
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text">Email</span>
@@ -116,19 +128,28 @@ const Register = () => {
                   </p>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Register</button>
+                  <button className="btn  bg-black text-white">Sign In</button>
                 </div>
               </form>
+              <div className="divider">OR</div>
+
               <p className="pb-6 mx-auto">
-                Already have an Account?{" "}
-                <NavLink to="/login" className="font-bold text-blue-600">
-                  Login
-                </NavLink>{" "}
+                Already Have an Account?{" "}
+                <NavLink to="/login" className="font-semibold text-blue-600">
+                  SignIn
+                </NavLink>
               </p>
             </div>
-            <Toaster position="top-center" reverseOrder={false} />
           </div>
         </div>
+        <div>
+          <img
+            className="max-h-[700px] min-w-[600px]"
+            src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
   );

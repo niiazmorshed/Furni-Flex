@@ -123,13 +123,14 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div >
+        <div>
           <img
             className="max-h-[700px] min-w-[600px]"
             src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
             alt=""
           />
         </div>
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
   );
