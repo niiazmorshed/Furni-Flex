@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ContextProvider>
       {" "}
-      <RouterProvider router={router}></RouterProvider>F
+      <RouterProvider router={router}></RouterProvider>
     </ContextProvider>
   </StrictMode>
 );

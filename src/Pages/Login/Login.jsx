@@ -19,10 +19,8 @@ const Login = () => {
 
     // Loggingin With The Function Calling
     logIn(mail, pass)
-      .then((result) => {
+      .then(() => {
         toast.success("Login Successfully");
-        const user = result.user;
-        console.log(user);
         e.target.reset();
         nevigate(location?.state ? location.state : "/");
       })
@@ -32,11 +30,13 @@ const Login = () => {
       });
   };
   const handleGoogleSignIn = () => {
+    toast.success("Please Wait");
     googleSignIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
+        nevigate("/");
+        toast.success("Login With Google Successfully");
       })
+
       .catch((error) => {
         console.error(error);
       });
@@ -44,10 +44,8 @@ const Login = () => {
 
   const handleGitHubSignIn = () => {
     gitHubSignIn()
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        nevigate(location?.state ? location.state : "/");
+      .then(() => {
+        nevigate("/");
       })
       .catch((error) => {
         console.error(error);
@@ -56,13 +54,14 @@ const Login = () => {
 
   return (
     <>
-      <div>
-        <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex-col md:w-96">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold">Login Now!</h1>
+      <div className="flex justify-center min-h-screen">
+        <div className="hero-content mt-16">
+          <div className="flex-col w-[600px]">
+            <div>
+              <h2 className="text-3xl font-bold">Welcome Back </h2>
+              <p>Enter Your Credintial To Access Your Accout</p>
             </div>
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
               <form onSubmit={handleLogin} className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -96,32 +95,40 @@ const Login = () => {
                   </p>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Login</button>
+                  <button className="btn  bg-black text-white">Sign In</button>
                 </div>
               </form>
-              <p className="pb-6 mx-auto">
-                Do not have an Account?{" "}
-                <NavLink to="/register" className="font-semibold text-blue-600">
-                  Register
-                </NavLink>
-              </p>
+              <div className="divider">OR</div>
+
               <div className="flex gap-4 justify-center mb-6 ">
                 <button
                   onClick={handleGoogleSignIn}
-                  className="btn btn-ghost btn-circle avatar rounded-full"
+                  className="btn btn-outline"
                 >
-                  <FaGoogle className="text-3xl"></FaGoogle>
+                  <FaGoogle className="text-3xl"></FaGoogle>Google
                 </button>
                 <button
                   onClick={handleGitHubSignIn}
-                  className="btn btn-ghost btn-circle avatar"
+                  className="btn btn-outline "
                 >
-                  <FaGithub className="text-3xl"></FaGithub>
+                  <FaGithub className="text-3xl"></FaGithub>Github
                 </button>
               </div>
+              <p className="pb-6 mx-auto">
+                Do not have an Account?{" "}
+                <NavLink to="/register" className="font-semibold text-blue-600">
+                  Signup
+                </NavLink>
+              </p>
             </div>
           </div>
-          <Toaster position="top-center" reverseOrder={false} />
+        </div>
+        <div >
+          <img
+            className="max-h-[700px] min-w-[600px]"
+            src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
+            alt=""
+          />
         </div>
       </div>
     </>
