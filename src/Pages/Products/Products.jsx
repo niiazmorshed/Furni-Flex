@@ -1,7 +1,10 @@
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
+import { useLoaderData } from "react-router-dom";
+import ProductsCard from "./ProductsCard";
 
 const Products = () => {
+  const info = useLoaderData();
   return (
     <div>
       <Helmet>
@@ -12,10 +15,12 @@ const Products = () => {
       <Navbar></Navbar>
       <div className="drawer lg:drawer-open my-4">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col m-2 p-2">
+        <div className="drawer-content flex flex-col">
           {/* Page content here */}
-          <div>
-            <h1>kire</h1>
+          <div className="md:grid md:grid-cols-3 gap-6 mx-4  ">
+            {info.map((i) => (
+              <ProductsCard key={i.id} product={i}></ProductsCard>
+            ))}
           </div>
           <label
             htmlFor="my-drawer-2"
@@ -31,9 +36,8 @@ const Products = () => {
             className="drawer-overlay"
           ></label>
           <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-            
             {/* Sidebar content here */}
-            
+
             <li>
               <a className="text-xl font-semibold">Rocking Chair</a>
             </li>
