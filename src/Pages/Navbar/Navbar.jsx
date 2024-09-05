@@ -51,7 +51,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar fixed z-10 top-0">
+    <div className="navbar  z-10 top-0">
+      {/* fixed */}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -77,7 +78,10 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="md:text-3xl font-bold sm: text-lg">Furni-Flex</a>
+        <h1 className="text-5xl font-bold">
+          <span className="text-white">Furni</span>{" "}
+          <span className="text-blue-500">Flex</span>
+        </h1>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

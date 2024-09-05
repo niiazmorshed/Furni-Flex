@@ -1,0 +1,149 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "description": "High-quality wireless headphones with noise-cancellation",
+        "price": 100.99,
+        "image": "https://example.com/images/headphones.jpg",
+        "category": "Electronics",
+        "stock": 25
+      },
+      {
+        "id": 2,
+        "name": "Smartphone",
+        "description": "Latest model smartphone with advanced features",
+        "price": 799.99,
+        "image": "https://example.com/images/smartphone.jpg",
+        "category": "Electronics",
+        "stock": 10
+      },
+      {
+        "id": 3,
+        "name": "Running Shoes",
+        "description": "Comfortable and durable running shoes for everyday use",
+        "price": 59.99,
+        "image": "https://example.com/images/shoes.jpg",
+        "category": "Fashion",
+        "stock": 50
+      },
+      {
+        "id": 4,
+        "name": "Leather Wallet",
+        "description": "Stylish leather wallet with multiple compartments",
+        "price": 19.99,
+        "image": "https://example.com/images/wallet.jpg",
+        "category": "Accessories",
+        "stock": 100
+      },
+      {
+        "id": 5,
+        "name": "Laptop",
+        "description": "Lightweight laptop with powerful performance",
+        "price": 1200.99,
+        "image": "https://example.com/images/laptop.jpg",
+        "category": "Electronics",
+        "stock": 5
+      },
+      {
+        "id": 6,
+        "name": "Desk Lamp",
+        "description": "Adjustable LED desk lamp with multiple brightness levels",
+        "price": 29.99,
+        "image": "https://example.com/images/lamp.jpg",
+        "category": "Home",
+        "stock": 20
+      },
+      {
+        "id": 7,
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with deep bass",
+        "price": 49.99,
+        "image": "https://example.com/images/speaker.jpg",
+        "category": "Electronics",
+        "stock": 15
+      },
+      {
+        "id": 8,
+        "name": "Smart Watch",
+        "description": "Water-resistant smart watch with health tracking features",
+        "price": 199.99,
+        "image": "https://example.com/images/smartwatch.jpg",
+        "category": "Accessories",
+        "stock": 30
+      },
+      {
+        "id": 9,
+        "name": "Gaming Mouse",
+        "description": "High-precision gaming mouse with customizable buttons",
+        "price": 39.99,
+        "image": "https://example.com/images/mouse.jpg",
+        "category": "Electronics",
+        "stock": 40
+      },
+      {
+        "id": 10,
+        "name": "Backpack",
+        "description": "Durable backpack with multiple compartments",
+        "price": 69.99,
+        "image": "https://example.com/images/backpack.jpg",
+        "category": "Fashion",
+        "stock": 60
+      },
+      {
+        "id": 11,
+        "name": "Coffee Maker",
+        "description": "Automatic coffee maker with programmable settings",
+        "price": 89.99,
+        "image": "https://example.com/images/coffeemaker.jpg",
+        "category": "Home",
+        "stock": 35
+      },
+      {
+        "id": 12,
+        "name": "Wireless Charger",
+        "description": "Fast wireless charger for smartphones and tablets",
+        "price": 24.99,
+        "image": "https://example.com/images/charger.jpg",
+        "category": "Electronics",
+        "stock": 70
+      },
+      {
+        "id": 13,
+        "name": "Electric Toothbrush",
+        "description": "Rechargeable electric toothbrush with multiple brush modes",
+        "price": 59.99,
+        "image": "https://example.com/images/toothbrush.jpg",
+        "category": "Health",
+        "stock": 20
+      },
+      {
+        "id": 14,
+        "name": "Fitness Tracker",
+        "description": "Advanced fitness tracker with heart rate monitor",
+        "price": 129.99,
+        "image": "https://example.com/images/fitnesstracker.jpg",
+        "category": "Health",
+        "stock": 45
+      },
+      {
+        "id": 15,
+        "name": "4K TV",
+        "description": "Ultra HD 4K smart TV with streaming apps",
+        "price": 999.99,
+        "image": "https://example.com/images/4ktv.jpg",
+        "category": "Electronics",
+        "stock": 8
+      },
+      {
+        "id": 16,
+        "name": "Air Fryer",
+        "description": "Healthy air fryer with adjustable temperature control",
+        "price": 79.99,
+        "image": "https://example.com/images/airfryer.jpg",
+        "category": "Home",
+        "stock": 50
+      }
+    ]
+  }
+  
