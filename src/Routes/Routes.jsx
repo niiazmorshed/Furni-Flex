@@ -23,6 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/categories",
         element: <Categories></Categories>,
+        loader: () => fetch("/public/info.json"),
       },
       {
         path: "/login",

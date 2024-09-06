@@ -2,19 +2,20 @@ import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { saveProduct } from "../../Storage/Localstorage";
+import toast, { Toaster } from "react-hot-toast";
 const ProductsCard = ({ product }) => {
   const { stock, category, image, price, description, name, id } = product;
 
-  const handleProduct = (id, name) => {
+  const handleProduct = (id) => {
+    toast.success("Added to your Cart!");
     saveProduct(id);
-    console.log("Chap Lagche", id, "te", "nam hoilo", name);
   };
 
   return (
     <div
       data-aos="fade-up"
       data-aos-duration="2000"
-      className=" sm: p-4 sm: m-4 card bg-base-100 shadow-lg shadow-red-700/50 border"
+      className=" sm: p-4 sm: m-4 card bg-base-100 shadow-lg shadow-red-700/50"
     >
       <figure className="max-h-60">
         <img src={image} />
@@ -50,6 +51,7 @@ const ProductsCard = ({ product }) => {
           </button>
         </NavLink>
       </div>
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };
