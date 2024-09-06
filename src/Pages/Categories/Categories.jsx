@@ -2,16 +2,23 @@ import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getStoredProduct } from "../../Storage/Localstorage";
+import { getStoredProduct, removeProduct } from "../../Storage/Localstorage";
 import Cart from "./Cart";
 
 const Categories = () => {
   const products_data = useLoaderData();
   const [myProduct, setMyProduct] = useState([]);
 
+  const handleCross = (id) => {
+    removeProduct(id);
+    const remainigProduct = myProduct.filter((i) => i.id !== id);
+    setMyProduct(remainigProduct);
+  };
+
   useEffect(() => {
     const storedProduct = getStoredProduct();
     if (products_data.length > 0) {
+      // const product = products_data.filter(i => storedProduct.includes(i.id));
       const productStored = [];
       for (const id of storedProduct) {
         const product = products_data.find((i) => i.id === id);
@@ -38,7 +45,7 @@ const Categories = () => {
         {/* Left-Col */}
         <div className="col-span-2">
           {myProduct.map((i) => (
-            <Cart key={i.id} cart={i}></Cart>
+            <Cart key={i.id} cart={i} handleCross={handleCross}></Cart>
           ))}
         </div>
 
@@ -54,9 +61,7 @@ const Categories = () => {
               <h1>Shipping : </h1>
               <h1>Vat :</h1>
 
-              <h1 className="pt-4 font-extrabold text-3xl">
-                Total Price:
-              </h1>
+              <h1 className="pt-4 font-extrabold text-3xl">Total Price:</h1>
             </div>
 
             <div className="text-center text-xl font-semibold">
@@ -69,6 +74,9 @@ const Categories = () => {
               </h1>
               <hr className="border-dotted" />
             </div>
+          </div>
+          <div className="flex justify-center my-4">
+            <button className="btn btn-outline w-3/4">Make Payment</button>
           </div>
         </div>
       </div>

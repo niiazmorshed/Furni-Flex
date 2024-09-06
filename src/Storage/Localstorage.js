@@ -17,4 +17,11 @@ const saveProduct = (id) => {
   }
 };
 
-export { saveProduct, getStoredProduct };
+const removeProduct = (id) => {
+  const storedProduct = getStoredProduct();
+  console.log(storedProduct);
+  const remaining = storedProduct.filter((i) => i != id);
+  localStorage.setItem("product", JSON.stringify(remaining));
+};
+
+export { saveProduct, getStoredProduct, removeProduct };

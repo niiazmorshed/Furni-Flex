@@ -51,12 +51,14 @@ const ProductsCard = ({ product }) => {
           </button>
         </NavLink>
       </div>
-      <Toaster position="top-center" reverseOrder={false} />
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };
 
 export default ProductsCard;
+
+
 ProductsCard.propTypes = {
-  children: PropTypes.node,
-};
+  product: PropTypes.array.isRequired
+}
