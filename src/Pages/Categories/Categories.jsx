@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getStoredProduct } from "../../Storage/Localstorage";
 import Cart from "./Cart";
+import CartCalculation from "./CartCalculation";
 
 const Categories = () => {
   const products_data = useLoaderData();
@@ -31,18 +32,21 @@ const Categories = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar></Navbar>
-      <div className="my-32 grid grid-cols-3 gap-4 m-6">
-        {/* Left-Col */}
 
-        <div className="col-span-2 border">
-          {
-            myProduct.map((i)=> <Cart key={i.id} cart={i} ></Cart>)
-          }
+      <div className="my-32 grid grid-cols-3 gap-6 p-10 ">
+        {/* Left-Col */}
+        <div className="col-span-2">
+          {myProduct.map((i) => (
+            <Cart key={i.id} cart={i}></Cart>
+          ))}
         </div>
 
-
         {/* Right-col */}
-        <div className="col-span-1 border"></div>
+        <div className="col-span-1">
+          {myProduct.map((i) => (
+            <CartCalculation key={i.id} calculation={i}></CartCalculation>
+          ))}
+        </div>
       </div>
     </div>
   );
