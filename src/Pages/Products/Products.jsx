@@ -18,7 +18,7 @@ const Products = () => {
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* Page content here */}
-          <div className="md:grid md:grid-cols-3 gap-6 mx-4  ">
+          <div className="md:grid md:grid-cols-3 gap-6 mx-4">
             {half.map((i) => (
               <ProductsCard key={i.id} product={i}></ProductsCard>
             ))}

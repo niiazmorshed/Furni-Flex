@@ -10,8 +10,15 @@ const Categories = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar></Navbar>
-      <div>
-        <h1>Categoreis Section Comming Soon</h1>
+      <div className="my-32 grid grid-cols-3">
+        {/* Left-Col */}
+        <div className="col-span-2">
+          
+        </div>
+        {/* Right-col */}
+          <div className="col-span-1">
+
+          </div>
       </div>
     </div>
   );
