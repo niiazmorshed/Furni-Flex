@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-
+import { Link, NavLink } from "react-router-dom";
+import "./nav.css";
 // import toast from "react-hot-toast";
 import UseAuth from "../../Hooks/UseAuth";
 import Dark from "../../Dark Mode/Dark";
@@ -80,12 +80,12 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <NavLink to="/">
+        <Link to="/">
           <h1 className="text-5xl font-bold">
             <span className="text-white">Furni</span>{" "}
             <span className="text-blue-500">Flex</span>
           </h1>
-        </NavLink>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

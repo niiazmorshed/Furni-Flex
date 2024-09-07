@@ -3,6 +3,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import UseAuth from "../../Hooks/UseAuth";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { logIn, googleSignIn, gitHubSignIn } = UseAuth();
@@ -56,6 +57,11 @@ const Login = () => {
 
   return (
     <>
+          <Helmet>
+        <meta charSet="utf-8" />
+        <title>{"Signin"} | Furni-Flex</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="md:flex justify-center md:min-h-screen">
         <div className="hero-content mt-16">
           <div className="flex-col w-[600px]">

@@ -4,7 +4,6 @@ import Bannner from "../Banner/Bannner";
 
 const Home = () => {
 
-  // console.log(products)
   return (
     <div>
       <Helmet>

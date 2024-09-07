@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { MdRemoveShoppingCart } from "react-icons/md";
 import { getStoredProduct, saveProduct } from "../../Storage/Localstorage";
@@ -44,14 +44,14 @@ const ProductsCard = ({ product }) => {
         <hr className="border-dashed" />
       </div>
       <div className="p-4">
-        <NavLink>
+        <Link>
           <button
             onClick={() => handleProduct(product)}
             className="btn btn-outline  w-full"
           >
             Add To Cart
           </button>
-        </NavLink>
+        </Link>
       </div>
       <Toaster position="top-right" reverseOrder={false} />
     </div>

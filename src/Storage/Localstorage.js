@@ -12,8 +12,6 @@ const saveProduct = (product) => {
   if (!exist) {
     storedProduct.push(product);
     localStorage.setItem("product", JSON.stringify(storedProduct));
-    console.log("Product saved successfully");
-    console.log(storedProduct);
   }
 };
 
@@ -29,13 +27,6 @@ const removeProduct = (cart) => {
 
 
 const incProduct = (id) => {
-  // const storedProduct = getStoredProduct();
-  // const product = storedProduct.find((i) => i.id === id);
-  // if (product) {
-  //   product.stock++;
-  //   // localStorage.setItem("product", JSON.stringify(storedProduct));
-  //   console.log(storedProduct);
-  // }
 };
 
 export { saveProduct, getStoredProduct, removeProduct, incProduct };

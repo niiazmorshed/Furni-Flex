@@ -21,12 +21,12 @@ const Categories = () => {
 
 
   const handleInc = (id) => {
-    console.log("Barche", id);
+    console.log("Increase", id);
     incProduct(id);
   };
 
   const handleDec = (id) => {
-    console.log("Komche", id);
+    console.log("Decrease", id);
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const Categories = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{"Categories"} | Furni Flex</title>
+        <title>{"My Cart"} | Furni-Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar></Navbar>

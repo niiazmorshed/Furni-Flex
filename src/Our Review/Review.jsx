@@ -9,7 +9,7 @@ const Review = () => {
     <div className="md: flex flex-col justify-center items-center">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Review| Furni Flex</title>
+        <title>{"Review"} | Furni-Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="md: w-[700px] ">
@@ -37,7 +37,7 @@ const Review = () => {
             <div>
               <p>
                 I am Jeff Bezos <br />I recently bought a dining set from Furni
-                Flex, and I couldn't be happier! The quality of the wood is
+                Flex, and I could not be happier! The quality of the wood is
                 excellent, and the chairs are both stylish and comfortable. The
                 website was easy to navigate, and the delivery was prompt. I
                 will definitely shop here again!
@@ -63,7 +63,7 @@ const Review = () => {
                 I am Elon Mask <br />
                 AI ordered a couple of office chairs for my home office, and
                 they are perfect! The ergonomic design has really improved my
-                posture. Great customer service too – they answered all my
+                posture. Great customer service too, they answered all my
                 questions quickly. Highly recommend Furni Flex for anyone
                 looking for quality furniture!
               </p>
@@ -88,7 +88,7 @@ const Review = () => {
                 I am Bill Gates <br />I purchased a lounge chair from Furni
                 Flex, and it’s fantastic! It was easy to assemble, and the
                 design fits perfectly in my living room. The price was also very
-                reasonable for the quality. I'll be coming back for more
+                reasonable for the quality. I wll be coming back for more
                 furniture in the future.
               </p>
             </div>

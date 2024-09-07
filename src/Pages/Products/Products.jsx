@@ -12,7 +12,7 @@ const Products = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{"Products"} | Furni Flex</title>
+        <title>{"Products"} | Furni-Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Navbar></Navbar>

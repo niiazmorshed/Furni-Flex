@@ -5,6 +5,7 @@ import auth from "../../Firebase/firebase.config";
 import UseAuth from "../../Hooks/UseAuth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser } = UseAuth();
@@ -18,7 +19,6 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const pass = form.get("password");
-    console.log(name, photo, email, pass);
 
     // Checking The Password requirements
     if (pass.length < 6) {
@@ -53,6 +53,11 @@ const Register = () => {
   };
   return (
     <>
+          <Helmet>
+        <meta charSet="utf-8" />
+        <title>{"Signup"} | Furni-Flex</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="md:flex justify-center min-h-screen">
         <div className="hero-content mt-16">
           <div className="flex-col md:w-[600px]">

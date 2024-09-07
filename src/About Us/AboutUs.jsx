@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="mt-12">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>We|Furni Flex</title>
+        <title>{"About Us"} | Furni-Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="flex justify-center items-center">
