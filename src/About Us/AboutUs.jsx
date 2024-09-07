@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-
+import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
-    return (
-<div className="mt-12">
+  return (
+    <div className="mt-12">
       <Helmet>
         <meta charSet="utf-8" />
         <title>We|Furni Flex</title>
@@ -26,14 +26,15 @@ const AboutUs = () => {
             <p className="text-base font-semibold text-start">
               As the CEO of our esteemed establishment, I am thrilled to extend
               a warm and heartfelt greeting to each and every guest who graces
-              our website. Thank you for considering Furni Flex for your Choice.<br /> Warm regards,
+              our website. Thank you for considering Furni Flex for your Choice.
+              <br /> Warm regards,
             </p>
           </div>
         </div>
-
       </div>
+      <Footer></Footer>
     </div>
-    );
+  );
 };
 
 export default AboutUs;

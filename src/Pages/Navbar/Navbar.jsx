@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 // import toast from "react-hot-toast";
 import UseAuth from "../../Hooks/UseAuth";
 import Dark from "../../Dark Mode/Dark";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const { user, logOut } = UseAuth();
@@ -10,7 +11,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        // toast.success("Logout Successfully");
+        toast.success("Logout Successfully");
       })
       .catch((error) => {
         console.error(error);

@@ -11,9 +11,7 @@ const Roots = () => {
         <div className="font-nunito">
           <Outlet></Outlet>
         </div>
-        <div className="mt-20 font-sans">
-          <Footer></Footer>
-        </div>
+
       </div>
         
     );

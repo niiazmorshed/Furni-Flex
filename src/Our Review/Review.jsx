@@ -2,6 +2,7 @@ import Lottie from "lottie-react";
 import { Helmet } from "react-helmet";
 import { IoStarSharp } from "react-icons/io5";
 import review from "../../public/fnaljson.json";
+import Footer from "../Footer/Footer";
 
 const Review = () => {
   return (
@@ -35,7 +36,11 @@ const Review = () => {
             </div>
             <div>
               <p>
-                I am Jeff Bezos <br />I recently bought a dining set from Furni Flex, and I couldn't be happier! The quality of the wood is excellent, and the chairs are both stylish and comfortable. The website was easy to navigate, and the delivery was prompt. I will definitely shop here again!
+                I am Jeff Bezos <br />I recently bought a dining set from Furni
+                Flex, and I couldn't be happier! The quality of the wood is
+                excellent, and the chairs are both stylish and comfortable. The
+                website was easy to navigate, and the delivery was prompt. I
+                will definitely shop here again!
               </p>
             </div>
           </div>
@@ -56,7 +61,11 @@ const Review = () => {
             <div>
               <p>
                 I am Elon Mask <br />
-                AI ordered a couple of office chairs for my home office, and they are perfect! The ergonomic design has really improved my posture. Great customer service too – they answered all my questions quickly. Highly recommend Furni Flex for anyone looking for quality furniture!
+                AI ordered a couple of office chairs for my home office, and
+                they are perfect! The ergonomic design has really improved my
+                posture. Great customer service too – they answered all my
+                questions quickly. Highly recommend Furni Flex for anyone
+                looking for quality furniture!
               </p>
             </div>
           </div>
@@ -76,12 +85,20 @@ const Review = () => {
             </div>
             <div>
               <p>
-                I am Bill Gates <br />I purchased a lounge chair from Furni Flex, and it’s fantastic! It was easy to assemble, and the design fits perfectly in my living room. The price was also very reasonable for the quality. I'll be coming back for more furniture in the future.
+                I am Bill Gates <br />I purchased a lounge chair from Furni
+                Flex, and it’s fantastic! It was easy to assemble, and the
+                design fits perfectly in my living room. The price was also very
+                reasonable for the quality. I'll be coming back for more
+                furniture in the future.
               </p>
             </div>
           </div>
         </div>
       </div>
+      <div className="mt-20 font-sans">
+        
+      </div>
+      <Footer></Footer>
     </div>
   );
 };

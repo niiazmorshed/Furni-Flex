@@ -12,12 +12,12 @@ const Bannner = () => {
       effect="fade"
       navigation
       scrollbar={{ draggable: true }}
-      // autoplay={{delay: 1500}}
+      autoplay={{delay: 1500}}
     >
       <SwiperSlide>
         <section className="banner1">
           <section className="pt-32">
-            <div className="md: flex flex-col justify-center text-center items-center gap-6 md:pt-6">
+            <div className="md: flex flex-col justify-center text-center items-center gap-6 md:pt-6 min-h-screen">
               <div className="animate__animated animate__lightSpeedInLeft flex gap-6">
                 <NavLink to="/products">
                   {" "}

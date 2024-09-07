@@ -2,11 +2,9 @@ import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import {
-  getStoredProduct,
-  removeProduct,
-} from "../../Storage/Localstorage";
+import { getStoredProduct, removeProduct } from "../../Storage/Localstorage";
 import Cart from "./Cart";
+import Footer from "../../Footer/Footer";
 
 const Categories = () => {
   const products_data = useLoaderData();
@@ -23,10 +21,9 @@ const Categories = () => {
     console.log("Barche", id);
     const productStored = [];
 
-    const updatedProduct = productStored.push(id)
+    const updatedProduct = productStored.push(id);
     setUpdate(updatedProduct);
-    console.log(update)
-
+    console.log(update);
   };
 
   const handleDec = (id) => {
@@ -59,7 +56,7 @@ const Categories = () => {
       </Helmet>
       <Navbar></Navbar>
 
-      <div className="my-32 grid grid-cols-3 gap-6 p-10 ">
+      <div className="my-32 md:grid md:grid-cols-3 md:gap-6 sm:gap-2  p-10 ">
         {/* Left-Col */}
         <div className="col-span-2">
           {myProduct.map((i) => (
@@ -104,6 +101,9 @@ const Categories = () => {
             <button className="btn btn-outline w-3/4">Make Payment</button>
           </div>
         </div>
+      </div>
+      <div className="mt-20 font-sans">
+        <Footer></Footer>
       </div>
     </div>
   );

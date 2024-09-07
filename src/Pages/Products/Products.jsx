@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import { NavLink, useLoaderData } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
+import Footer from "../../Footer/Footer";
 
 
 const Products = () => {
@@ -55,6 +56,9 @@ const Products = () => {
           <button className="btn btn-info btn-outline w-44">Show All</button>
         </NavLink>
       </div>
+      <div className="mt-20 font-sans">
+          <Footer></Footer>
+        </div>
     </div>
   );
 };
