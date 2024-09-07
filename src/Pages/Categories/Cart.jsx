@@ -18,7 +18,7 @@ const Cart = ({ cart, handleCross, handleDec, handleInc, update }) => {
         </button>
       </div>
       <div className="md:flex p-4 w-3/4 gap-4">
-        <img className="md:w-56 md:h-4 rounded-full" src={image} />
+        <img className="md:w-56 md:h-44 rounded-full" src={image} />
         <div>
           <h1 className="text-center text-xl font-bold">{name}</h1>
           <h2>{category}</h2>
