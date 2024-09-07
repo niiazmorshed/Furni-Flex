@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { A11y, EffectFade, Navigation, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -18,9 +19,10 @@ const Bannner = () => {
           <section className="pt-32">
             <div className="md: flex flex-col justify-center text-center items-center gap-6 md:pt-6">
               <div className="animate__animated animate__lightSpeedInLeft flex gap-6">
-                <button className="btn btn-outline">
-                  Check Now{" "}
-                </button>
+                <NavLink to="/products">
+                  {" "}
+                  <button className="btn btn-outline">Check Products </button>
+                </NavLink>
               </div>
             </div>
           </section>

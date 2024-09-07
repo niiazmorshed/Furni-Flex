@@ -30,22 +30,16 @@ const Navbar = () => {
           <a className="text-white text-base font-semibold">Products</a>
         </li>
       </NavLink>
-      <NavLink to="/categories">
+      <NavLink to="/review">
         {" "}
         <li>
-          <a className="text-white text-base font-semibold">Categories</a>
+          <a className="text-white text-base font-semibold">Review</a>
         </li>
       </NavLink>
-      <NavLink to="/custom">
+      <NavLink to="/aboutus">
         {" "}
         <li>
-          <a className="text-white text-base font-semibold">Custom</a>
-        </li>
-      </NavLink>
-      <NavLink to="/blog">
-        {" "}
-        <li>
-          <a className="text-white text-base font-semibold">Blog</a>
+          <a className="text-white text-base font-semibold">About Us</a>
         </li>
       </NavLink>
     </>

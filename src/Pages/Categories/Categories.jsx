@@ -2,17 +2,35 @@ import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getStoredProduct, removeProduct } from "../../Storage/Localstorage";
+import {
+  getStoredProduct,
+  removeProduct,
+} from "../../Storage/Localstorage";
 import Cart from "./Cart";
 
 const Categories = () => {
   const products_data = useLoaderData();
   const [myProduct, setMyProduct] = useState([]);
+  const [update, setUpdate] = useState([]);
 
   const handleCross = (id) => {
     removeProduct(id);
     const remainigProduct = myProduct.filter((i) => i.id !== id);
     setMyProduct(remainigProduct);
+  };
+
+  const handleInc = (id) => {
+    console.log("Barche", id);
+    const productStored = [];
+
+    const updatedProduct = productStored.push(id)
+    setUpdate(updatedProduct);
+    console.log(update)
+
+  };
+
+  const handleDec = (id) => {
+    console.log("Komche", id);
   };
 
   useEffect(() => {
@@ -30,7 +48,7 @@ const Categories = () => {
     }
   }, [products_data]);
   const totalPrice = myProduct.reduce((a, b) => a + b.price, 0);
-  console.log(totalPrice);
+  const totalPriceINT = parseFloat(totalPrice).toFixed(2);
 
   return (
     <div>
@@ -45,7 +63,14 @@ const Categories = () => {
         {/* Left-Col */}
         <div className="col-span-2">
           {myProduct.map((i) => (
-            <Cart key={i.id} cart={i} handleCross={handleCross}></Cart>
+            <Cart
+              key={i.id}
+              cart={i}
+              handleCross={handleCross}
+              handleInc={handleInc}
+              handleDec={handleDec}
+              update={update}
+            ></Cart>
           ))}
         </div>
 
@@ -65,12 +90,12 @@ const Categories = () => {
             </div>
 
             <div className="text-center text-xl font-semibold">
-              <p>{totalPrice}/-</p>
+              <p>{totalPriceINT}/-</p>
               <p>Free</p>
               <p>$-</p>
 
               <h1 className="pt-4 text-yellow-700 font-extrabold text-3xl">
-                {totalPrice}/-
+                {totalPriceINT}/-
               </h1>
               <hr className="border-dotted" />
             </div>

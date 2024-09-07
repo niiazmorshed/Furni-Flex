@@ -1,15 +1,21 @@
 import { RxCross2 } from "react-icons/rx";
 import PropTypes from "prop-types";
 
-const Cart = ({ cart, handleCross }) => {
+const Cart = ({ cart, handleCross, handleDec, handleInc, update }) => {
   const { name, id, category, image, price } = cart;
 
   return (
     <div className="bg-base-200 flex my-4 p-4 rounded-3xl">
       <div className="flex justify-center items-center gap-2 text-2xl font-bold ">
-        <button className="bg-base-300"> - </button>
-        <span>1</span>
-        <button className="bg-base-300"> + </button>
+        <button onClick={() => handleDec(id)} className="bg-base-300">
+          {" "}
+          -{" "}
+        </button>
+        <span>{update}</span>
+        <button onClick={() => handleInc(id)} className="bg-base-300">
+          {" "}
+          +{" "}
+        </button>
       </div>
       <div className="flex p-4 w-3/4 gap-4">
         <img className="w-56 h-44 rounded-full" src={image} />
@@ -35,4 +41,7 @@ export default Cart;
 Cart.propTypes = {
   cart: PropTypes.array.isRequired,
   handleCross: PropTypes.func.isRequired,
+  handleInc: PropTypes.func.isRequired,
+  handleDec: PropTypes.func.isRequired,
+  update: PropTypes.array.isRequired,
 };

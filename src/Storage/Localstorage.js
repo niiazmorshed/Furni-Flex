@@ -24,4 +24,9 @@ const removeProduct = (id) => {
   localStorage.setItem("product", JSON.stringify(remaining));
 };
 
-export { saveProduct, getStoredProduct, removeProduct };
+const incProduct = (id) => {
+  // const storedProduct = getStoredProduct();
+
+};
+
+export { saveProduct, getStoredProduct, removeProduct, incProduct };
