@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 // import toast from "react-hot-toast";
 import UseAuth from "../../Hooks/UseAuth";
+import Dark from "../../Dark Mode/Dark";
 
 const Navbar = () => {
   const { user, logOut } = UseAuth();
@@ -82,7 +83,7 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end sm: pr-12 md:pr-2">
-        {/* <DarkMode></DarkMode> */}
+        <Dark></Dark>
 
         <div className="dropdown dropdown-end">
           <div

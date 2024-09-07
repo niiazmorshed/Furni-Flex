@@ -9,7 +9,7 @@ const AboutUs = () => {
         <title>We|Furni Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="flex justify-center items-center my-44">
+      <div className="flex justify-center items-center">
         <div
           data-aos="zoom-in"
           data-aos-duration="3000"
