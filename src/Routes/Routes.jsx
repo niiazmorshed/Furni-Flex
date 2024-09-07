@@ -9,6 +9,7 @@ import Review from "../Our Review/Review";
 import AboutUs from "../About Us/AboutUs";
 import Error from "../Error/Error";
 import ShowAll from "../Pages/Products/ShowAll";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        element: <Products></Products>,
+        element: (
+          <PrivateRoute>
+            <Products></Products>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/info.json"),
       },
       {
         path: "/categories",
-        element: <Categories></Categories>,
+        element: (
+          <PrivateRoute>
+            <Categories></Categories>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/info.json"),
       },
       {

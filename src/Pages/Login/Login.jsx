@@ -33,8 +33,8 @@ const Login = () => {
     toast.success("Please Wait");
     googleSignIn()
       .then(() => {
-        nevigate("/");
-        toast.success("Login With Google Successfully");
+        // toast.success("Login With Google Successfully");
+        nevigate(location?.state ? location.state : "/");
       })
 
       .catch((error) => {
@@ -46,8 +46,8 @@ const Login = () => {
     toast.success("Please Wait");
     gitHubSignIn()
       .then(() => {
-        nevigate("/");
-        toast.success("Login With gitHub Successfully");
+        // toast.success("Login With gitHub Successfully");
+        nevigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -61,7 +61,9 @@ const Login = () => {
           <div className="flex-col w-[600px]">
             <div className="text-center">
               <h2 className="text-3xl font-bold">Welcome Back </h2>
-              <p className="font-base pt-2">Enter Your Credintial To Access Your Accout</p>
+              <p className="font-base pt-2">
+                Enter Your Credintial To Access Your Accout
+              </p>
             </div>
             <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
               <form onSubmit={handleLogin} className="card-body">
