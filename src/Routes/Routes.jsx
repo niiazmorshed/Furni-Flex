@@ -23,12 +23,12 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products></Products>,
-        loader: () => fetch("/public/info.json"),
+        loader: () => fetch("/info.json"),
       },
       {
         path: "/categories",
         element: <Categories></Categories>,
-        loader: () => fetch("/public/info.json"),
+        loader: () => fetch("/info.json"),
       },
       {
         path: "/login",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: "/showall",
         element: <ShowAll></ShowAll>,
-        loader: () => fetch("/public/info.json"),
+        loader: () => fetch("/info.json"),
       },
     ],
   },
