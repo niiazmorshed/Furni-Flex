@@ -4,11 +4,11 @@ import { MdRemoveShoppingCart } from "react-icons/md";
 import { saveProduct } from "../../Storage/Localstorage";
 import toast, { Toaster } from "react-hot-toast";
 const ProductsCard = ({ product }) => {
-  const { stock, category, image, price, description, name, id } = product;
+  const { stock, category, image, price, description, name } = product;
 
-  const handleProduct = (id) => {
+  const handleProduct = (product) => {
     toast.success("Added to your Cart!");
-    saveProduct(id);
+    saveProduct(product);
   };
 
   return (
@@ -44,7 +44,7 @@ const ProductsCard = ({ product }) => {
       <div className="p-4">
         <NavLink>
           <button
-            onClick={() => handleProduct(id, name)}
+            onClick={() => handleProduct(product)}
             className="btn btn-outline  w-full"
           >
             Add To Cart

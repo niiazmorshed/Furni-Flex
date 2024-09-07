@@ -20,7 +20,7 @@ const Login = () => {
     // Loggingin With The Function Calling
     logIn(mail, pass)
       .then(() => {
-        toast.success("Login Successfully");
+        // toast.success("Login Successfully");
         e.target.reset();
         nevigate(location?.state ? location.state : "/");
       })

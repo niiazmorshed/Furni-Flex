@@ -94,7 +94,7 @@
     "name": "Lounge Chair",
     "description": "Elegant lounge chair with cushioned seat and reclined backrest",
     "price": 249.99,
-    "image": "https://example.com/images/lounge-chair.jpg",
+    "image": "https://i.ibb.co.com/WGWrtSj/mitch-moondae-z-XFtsdi9d-Ic-unsplash.jpg",
     "category": "Living Room",
     "stock": 6
   },
@@ -103,7 +103,7 @@
     "name": "Plastic Stackable Chair",
     "description": "Durable plastic chair, stackable for easy storage",
     "price": 29.99,
-    "image": "https://example.com/images/plastic-stackable-chair.jpg",
+    "image": "https://i.ibb.co.com/Fgsy42b/declan-sun-PUj-LLUj-Hu-OQ-unsplash.jpg",
     "category": "Outdoor",
     "stock": 50
   },
@@ -112,7 +112,7 @@
     "name": "Wingback Chair",
     "description": "Traditional wingback chair with fabric upholstery and wooden legs",
     "price": 199.99,
-    "image": "https://example.com/images/wingback-chair.jpg",
+    "image": "https://i.ibb.co.com/gMb0GWY/annie-spratt-t-J8x4o-CQ5j-E-unsplash.jpg",
     "category": "Living Room",
     "stock": 9
   },
@@ -121,7 +121,7 @@
     "name": "Director's Chair",
     "description": "Portable director's chair with foldable frame and canvas seat",
     "price": 79.99,
-    "image": "https://example.com/images/directors-chair.jpg",
+    "image": "https://i.ibb.co.com/ByxnmT7/stephanie-klepacki-YT-ku-CI0p-E-unsplash.jpg",
     "category": "Outdoor",
     "stock": 22
   },
@@ -130,7 +130,7 @@
     "name": "Task Chair",
     "description": "Comfortable task chair with adjustable height and wheels",
     "price": 89.99,
-    "image": "https://example.com/images/task-chair.jpg",
+    "image": "https://i.ibb.co.com/jrcM9R6/sarah-dorweiler-7t-Fl-UFGa7-Dk-unsplash.jpg",
     "category": "Office",
     "stock": 35
   },
@@ -139,7 +139,7 @@
     "name": "Papasan Chair",
     "description": "Cozy papasan chair with round cushion and rattan frame",
     "price": 149.99,
-    "image": "https://example.com/images/papasan-chair.jpg",
+    "image": "https://i.ibb.co.com/589Lwv3/rebalanse-health-devices-u-COv-F2si3-Q-unsplash.jpg",
     "category": "Living Room",
     "stock": 4
   },
@@ -148,7 +148,7 @@
     "name": "High Chair",
     "description": "Adjustable high chair for babies and toddlers, easy to clean",
     "price": 59.99,
-    "image": "https://example.com/images/high-chair.jpg",
+    "image": "https://i.ibb.co.com/hCk6Px9/equilateral-zmh0-R4-Te-IQ-unsplash.jpg",
     "category": "Kids",
     "stock": 40
   },
@@ -157,7 +157,7 @@
     "name": "Armchair",
     "description": "Comfy armchair with oversized cushions and wooden frame",
     "price": 179.99,
-    "image": "https://example.com/images/armchair.jpg",
+    "image": "https://i.ibb.co.com/g644Ncd/ellery-sterling-4c-Laowk4-L8k-unsplash.jpg",
     "category": "Living Room",
     "stock": 14
   },
@@ -166,7 +166,7 @@
     "name": "Massage Chair",
     "description": "Luxury massage chair with multiple massage modes and recline feature",
     "price": 799.99,
-    "image": "https://example.com/images/massage-chair.jpg",
+    "image": "https://i.ibb.co.com/589Lwv3/rebalanse-health-devices-u-COv-F2si3-Q-unsplash.jpg",
     "category": "Living Room",
     "stock": 3
   },
@@ -175,7 +175,7 @@
     "name": "Chaise Lounge",
     "description": "Elegant chaise lounge with soft fabric and cushioned seat",
     "price": 349.99,
-    "image": "https://example.com/images/chaise-lounge.jpg",
+    "image": "https://i.ibb.co.com/6B4NB6d/balint-miko-PGn6qa-Nbo5-E-unsplash.jpg",
     "category": "Living Room",
     "stock": 5
   }

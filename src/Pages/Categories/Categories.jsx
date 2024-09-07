@@ -1,15 +1,13 @@
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
-import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getStoredProduct, removeProduct } from "../../Storage/Localstorage";
+import { getStoredProduct, incProduct, removeProduct } from "../../Storage/Localstorage";
 import Cart from "./Cart";
 import Footer from "../../Footer/Footer";
 
 const Categories = () => {
-  const products_data = useLoaderData();
   const [myProduct, setMyProduct] = useState([]);
-  const [update, setUpdate] = useState([]);
+  // const [update, setUpdate] = useState([]);
 
   const handleCross = (id) => {
     removeProduct(id);
@@ -18,13 +16,16 @@ const Categories = () => {
   };
 
   const handleInc = (id) => {
-    console.log("Barche", id);
-    const productStored = [];
+    // console.log("Barche", id);
+    // const updatedProduct = myProduct.map((item) =>
+    //   item.id === id ? { ...item, count: (item.count += 1) } : item
+    // );
+    // console.log(updatedProduct);
 
-    const updatedProduct = productStored.push(id);
-    setUpdate(updatedProduct);
-    console.log(update);
+
+    incProduct(id)
   };
+  
 
   const handleDec = (id) => {
     console.log("Komche", id);
@@ -32,18 +33,12 @@ const Categories = () => {
 
   useEffect(() => {
     const storedProduct = getStoredProduct();
-    if (products_data.length > 0) {
+    if (storedProduct.length > 0) {
       // const product = products_data.filter(i => storedProduct.includes(i.id));
-      const productStored = [];
-      for (const id of storedProduct) {
-        const product = products_data.find((i) => i.id === id);
-        if (product) {
-          productStored.push(product);
-        }
-      }
-      setMyProduct(productStored);
+      setMyProduct(storedProduct);
     }
-  }, [products_data]);
+  }, []);
+
   const totalPrice = myProduct.reduce((a, b) => a + b.price, 0);
   const totalPriceINT = parseFloat(totalPrice).toFixed(2);
 
@@ -66,7 +61,6 @@ const Categories = () => {
               handleCross={handleCross}
               handleInc={handleInc}
               handleDec={handleDec}
-              update={update}
             ></Cart>
           ))}
         </div>

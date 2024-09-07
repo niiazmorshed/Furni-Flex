@@ -1,7 +1,7 @@
 import { RxCross2 } from "react-icons/rx";
 import PropTypes from "prop-types";
 
-const Cart = ({ cart, handleCross, handleDec, handleInc, update }) => {
+const Cart = ({ cart, handleCross, handleDec, handleInc }) => {
   const { name, id, category, image, price } = cart;
 
   return (
@@ -11,7 +11,7 @@ const Cart = ({ cart, handleCross, handleDec, handleInc, update }) => {
           {" "}
           -{" "}
         </button>
-        <span>{update}</span>
+        <span>3</span>
         <button onClick={() => handleInc(id)} className="bg-base-300">
           {" "}
           +{" "}
