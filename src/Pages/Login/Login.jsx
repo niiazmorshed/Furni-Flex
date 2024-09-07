@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="flex justify-center min-h-screen">
+      <div className="md:flex justify-center md:min-h-screen">
         <div className="hero-content mt-16">
           <div className="flex-col w-[600px]">
             <div className="text-center">
@@ -127,7 +127,7 @@ const Login = () => {
         </div>
         <div>
           <img
-            className="max-h-[700px] min-w-[600px] my-24"
+            className="md: max-h-[700px] md:min-w-[600px] md:my-24"
             src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
             alt=""
           />

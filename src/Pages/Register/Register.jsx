@@ -53,9 +53,9 @@ const Register = () => {
   };
   return (
     <>
-      <div className="flex justify-center min-h-screen">
+      <div className="md:flex justify-center min-h-screen">
         <div className="hero-content mt-16">
-          <div className="flex-col w-[600px]">
+          <div className="flex-col md:w-[600px]">
             <div className="text-center">
               <h2 className="text-3xl font-bold">Welcome Back To </h2>
               <h1 className="text-5xl font-bold">
@@ -66,11 +66,11 @@ const Register = () => {
                 Signup For Purchase Your Desire Products
               </p>
             </div>
-            <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
+            <div className="card shrink-0 md:w-full  shadow-2xl bg-base-100">
               <form onSubmit={handleRegister} className="card-body">
-                <div className="flex gap-6">
+                <div className="md:flex md:gap-6">
                   {/*First Name */}
-                  <div className="form-control w-full">
+                  <div className="form-control md:w-full">
                     <label className="label">
                       <span className="label-text">First Name</span>
                     </label>
@@ -84,7 +84,7 @@ const Register = () => {
                   </div>
 
                   {/* Last Name */}
-                  <div className="form-control w-full">
+                  <div className="form-control md:w-full">
                     <label className="label">
                       <span className="label-text">Last Name (Optional)</span>
                     </label>
@@ -144,7 +144,7 @@ const Register = () => {
         </div>
         <div>
           <img
-            className="max-h-[700px] min-w-[600px] my-24"
+            className="md: max-h-[700px] md:min-w-[600px] md:my-24"
             src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
             alt=""
           />
