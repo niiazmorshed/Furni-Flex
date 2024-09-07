@@ -21,7 +21,7 @@ const Bannner = () => {
               <div className="animate__animated animate__lightSpeedInLeft flex gap-6">
                 <NavLink to="/products">
                   {" "}
-                  <button className="btn btn-outline">Check Products </button>
+                  <button className="btn btn-outline text-white">Check Products </button>
                 </NavLink>
               </div>
             </div>

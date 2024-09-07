@@ -43,9 +43,11 @@ const Login = () => {
   };
 
   const handleGitHubSignIn = () => {
+    toast.success("Please Wait");
     gitHubSignIn()
       .then(() => {
         nevigate("/");
+        toast.success("Login With gitHub Successfully");
       })
       .catch((error) => {
         console.error(error);
@@ -125,7 +127,7 @@ const Login = () => {
         </div>
         <div>
           <img
-            className="max-h-[700px] min-w-[600px]"
+            className="max-h-[700px] min-w-[600px] my-24"
             src="https://i.ibb.co/w4hdDPx/vincent-wachowiak-Yh7-HRBSc-ECs-unsplash.jpg"
             alt=""
           />

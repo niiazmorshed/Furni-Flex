@@ -31,6 +31,12 @@ const Navbar = () => {
           <a className="text-white text-base font-semibold">Products</a>
         </li>
       </NavLink>
+      <NavLink to="/categories">
+        {" "}
+        <li>
+          <a className="text-white text-base font-semibold">My Product</a>
+        </li>
+      </NavLink>
       <NavLink to="/review">
         {" "}
         <li>
