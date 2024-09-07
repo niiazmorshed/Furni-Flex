@@ -35,7 +35,7 @@ const Navbar = () => {
       <NavLink to="/categories">
         {" "}
         <li>
-          <a className="text-white text-base font-semibold">My Product</a>
+          <a className="text-white text-base font-semibold">My Cart</a>
         </li>
       </NavLink>
       <NavLink to="/review">
