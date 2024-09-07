@@ -26,7 +26,7 @@ const Cart = ({ cart, handleCross, handleDec, handleInc }) => {
       </div>
 
       <div className="flex flex-col justify-between items-end p-4 w-1/2">
-        <button onClick={() => handleCross(id)}>
+        <button onClick={() => handleCross(cart)}>
           {" "}
           <RxCross2 className="text-4xl" />
         </button>

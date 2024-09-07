@@ -17,21 +17,25 @@ const saveProduct = (product) => {
   }
 };
 
-const removeProduct = (id) => {
+const removeProduct = (cart) => {
   const storedProduct = getStoredProduct();
-  console.log(storedProduct);
-  const remaining = storedProduct.filter((i) => i != id);
+
+  const remaining = storedProduct.filter(
+    (storedItem) => storedItem.id !== cart.id
+  );
   localStorage.setItem("product", JSON.stringify(remaining));
+  console.log("Product removed successfully", remaining);
 };
 
+
 const incProduct = (id) => {
-  const storedProduct = getStoredProduct();
-  const product = storedProduct.find((i) => i.id === id);
-  if (product) {
-    product.stock++;
-    // localStorage.setItem("product", JSON.stringify(storedProduct));
-    console.log(storedProduct);
-  }
+  // const storedProduct = getStoredProduct();
+  // const product = storedProduct.find((i) => i.id === id);
+  // if (product) {
+  //   product.stock++;
+  //   // localStorage.setItem("product", JSON.stringify(storedProduct));
+  //   console.log(storedProduct);
+  // }
 };
 
 export { saveProduct, getStoredProduct, removeProduct, incProduct };

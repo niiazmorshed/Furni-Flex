@@ -1,31 +1,29 @@
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
 import { useEffect, useState } from "react";
-import { getStoredProduct, incProduct, removeProduct } from "../../Storage/Localstorage";
+import {
+  getStoredProduct,
+  incProduct,
+  removeProduct,
+} from "../../Storage/Localstorage";
 import Cart from "./Cart";
 import Footer from "../../Footer/Footer";
 
 const Categories = () => {
   const [myProduct, setMyProduct] = useState([]);
-  // const [update, setUpdate] = useState([]);
 
-  const handleCross = (id) => {
-    removeProduct(id);
-    const remainigProduct = myProduct.filter((i) => i.id !== id);
-    setMyProduct(remainigProduct);
-  };
+
+  const handleCross = (cart) => {
+    removeProduct(cart);
+    setMyProduct(myProduct.filter((i) => i.id !== cart.id));
+};
+
+
 
   const handleInc = (id) => {
-    // console.log("Barche", id);
-    // const updatedProduct = myProduct.map((item) =>
-    //   item.id === id ? { ...item, count: (item.count += 1) } : item
-    // );
-    // console.log(updatedProduct);
-
-
-    incProduct(id)
+    console.log("Barche", id);
+    incProduct(id);
   };
-  
 
   const handleDec = (id) => {
     console.log("Komche", id);
