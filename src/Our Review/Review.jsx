@@ -8,7 +8,7 @@ const Review = () => {
     <div className="md: flex flex-col justify-center items-center">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Review|MAD</title>
+        <title>Review| Furni Flex</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="md: w-[700px] ">

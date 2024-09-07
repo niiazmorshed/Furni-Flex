@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 import Navbar from "../Navbar/Navbar";
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import ProductsCard from "./ProductsCard";
+
 
 const Products = () => {
   const info = useLoaderData();
@@ -23,6 +24,7 @@ const Products = () => {
               <ProductsCard key={i.id} product={i}></ProductsCard>
             ))}
           </div>
+
           <label
             htmlFor="my-drawer-2"
             className="btn btn-primary drawer-button lg:hidden"
@@ -49,7 +51,9 @@ const Products = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <button className="btn btn-info btn-outline w-44">Show All</button>
+        <NavLink to="/showall">
+          <button className="btn btn-info btn-outline w-44">Show All</button>
+        </NavLink>
       </div>
     </div>
   );

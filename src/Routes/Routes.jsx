@@ -8,6 +8,7 @@ import Register from "../Pages/Register/Register";
 import Review from "../Our Review/Review";
 import AboutUs from "../About Us/AboutUs";
 import Error from "../Error/Error";
+import ShowAll from "../Pages/Products/ShowAll";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: "/aboutus",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/showall",
+        element: <ShowAll></ShowAll>,
+        loader: () => fetch("/public/info.json"),
       },
     ],
   },
